@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/medium_padding"
+            android:layout_marginStart="@dimen/medium_padding"
             android:gravity="center_vertical"
             android:textColor="@android:color/black"
             android:textSize="@dimen/small_text_size"

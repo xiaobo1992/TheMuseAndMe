@@ -3,15 +3,18 @@
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_info_outline_black_24px"
+        android:contentDescription="@string/profile"
         android:title="@string/profile" />
 
     <item
         android:id="@+id/job"
         android:icon="@drawable/ic_business_black_24px"
+        android:contentDescription="@string/job"
         android:title="@string/job" />
 
     <item
         android:id="@+id/location"
         android:icon="@drawable/ic_location_on_black_24px"
+        android:contentDescription="@string/location"
         android:title="@string/location" />
 </menu>

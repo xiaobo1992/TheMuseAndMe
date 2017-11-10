@@ -101,11 +101,7 @@ public class CoachProfileFragment extends Fragment {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getValue() != null) {
-                    coach.liked = true;
-                } else {
-                    coach.liked = false;
-                }
+                coach.liked = dataSnapshot.getValue() != null;
                 Drawable drawable = coach.liked ?
                         ContextCompat.getDrawable(view.getContext(), R.drawable.ic_favorite_pink_24px) :
                         ContextCompat.getDrawable(view.getContext(), R.drawable.ic_favorite_white_24px);

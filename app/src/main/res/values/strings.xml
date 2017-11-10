@@ -41,5 +41,6 @@
     <string name="f1">f1_image</string>
     <string name="f2">f2_image</string>
     <string name="f3">f3_image</string>
+    <string name="rate">rate</string>
 
 </resources>

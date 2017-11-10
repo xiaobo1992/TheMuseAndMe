@@ -17,7 +17,7 @@ public class MyAuth {
     }
 
     public static boolean isSignIn() {
-        return FirebaseAuth.getInstance().getCurrentUser() != null ? true : false;
+        return FirebaseAuth.getInstance().getCurrentUser() != null;
     }
 
     public static GoogleSignInOptions buildGoogleSignInOptions(String clientID) {

@@ -6,7 +6,6 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.widget.DatePicker;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**

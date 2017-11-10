@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.bobo.normalman.themuseandme.R;
 import com.bobo.normalman.themuseandme.model.Coach;
-import com.bobo.normalman.themuseandme.util.ImageUtil;
 import com.bobo.normalman.themuseandme.util.ModelUtil;
 import com.bobo.normalman.themuseandme.view.base.BaseListAdapter;
 import com.bobo.normalman.themuseandme.view.profile.CoachProfileActivity;

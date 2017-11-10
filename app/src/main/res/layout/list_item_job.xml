@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/job_position"
-        android:drawableLeft="@drawable/ic_location_on_pink_24px"
+        android:drawableStart="@drawable/ic_location_on_pink_24px"
         android:drawablePadding="@dimen/small_padding"
         android:gravity="center_vertical"
         android:textColor="@color/colorAccent"

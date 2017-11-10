@@ -6,7 +6,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bobo.normalman.themuseandme.R;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

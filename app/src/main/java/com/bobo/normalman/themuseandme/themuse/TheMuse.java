@@ -1,9 +1,6 @@
 package com.bobo.normalman.themuseandme.themuse;
 
-import android.content.res.Resources;
-
 import com.bobo.normalman.themuseandme.BuildConfig;
-import com.bobo.normalman.themuseandme.R;
 import com.bobo.normalman.themuseandme.model.Coach;
 import com.bobo.normalman.themuseandme.model.Company;
 import com.bobo.normalman.themuseandme.model.Job;

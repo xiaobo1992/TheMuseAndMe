@@ -2,7 +2,6 @@ package com.bobo.normalman.themuseandme.task;
 
 import android.os.AsyncTask;
 import android.text.TextUtils;
-import android.widget.ImageView;
 
 import com.bobo.normalman.themuseandme.model.Company;
 import com.bobo.normalman.themuseandme.themuse.TheMuse;

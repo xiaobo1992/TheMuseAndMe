@@ -106,11 +106,7 @@ public class CompanyProfileFragment extends Fragment {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getValue() != null) {
-                    company.liked = true;
-                } else {
-                    company.liked = false;
-                }
+                company.liked = dataSnapshot.getValue() != null;
                 Log.d("context", (getContext() == null) + "");
                 Drawable drawable = company.liked ?
                         ContextCompat.getDrawable(view.getContext(), R.drawable.ic_favorite_pink_24px) :

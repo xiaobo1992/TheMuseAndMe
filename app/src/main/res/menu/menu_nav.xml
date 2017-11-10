@@ -5,16 +5,19 @@
         <item
             android:id="@+id/main"
             android:checked="true"
+            android:contentDescription="@string/main"
             android:textSize="@dimen/medium_text_size"
             android:title="@string/main" />
 
         <item
             android:id="@+id/favourite"
+            android:contentDescription="@string/favourite"
             android:textSize="@dimen/medium_text_size"
             android:title="@string/favourite" />
 
         <item
             android:id="@+id/application"
+            android:contentDescription="@string/application"
             android:textSize="@dimen/medium_text_size"
             android:title="@string/application" />
     </group>

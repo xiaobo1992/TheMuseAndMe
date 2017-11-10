@@ -16,7 +16,6 @@ import com.bobo.normalman.themuseandme.view.list.job.JobListFragment;
 import com.bobo.normalman.themuseandme.view.profile.company.CompanyLocationFragment;
 import com.bobo.normalman.themuseandme.view.profile.company.CompanyProfileFragment;
 import com.bobo.normalman.themuseandme.widget.CompanyWidgetService;
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.reflect.TypeToken;
 
 import butterknife.BindView;

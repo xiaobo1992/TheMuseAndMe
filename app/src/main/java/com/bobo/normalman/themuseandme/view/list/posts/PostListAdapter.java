@@ -1,6 +1,5 @@
 package com.bobo.normalman.themuseandme.view.list.posts;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -15,8 +14,6 @@ import com.bobo.normalman.themuseandme.model.Post;
 import com.bobo.normalman.themuseandme.util.ModelUtil;
 import com.bobo.normalman.themuseandme.view.base.BaseListAdapter;
 import com.bobo.normalman.themuseandme.view.profile.PostProfileActivity;
-import com.facebook.drawee.drawable.ScalingUtils;
-import com.facebook.drawee.view.DraweeTransition;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.List;

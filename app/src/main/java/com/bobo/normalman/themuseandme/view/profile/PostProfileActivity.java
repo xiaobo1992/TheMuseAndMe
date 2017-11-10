@@ -103,11 +103,7 @@ public class PostProfileActivity extends BaseProfileActivity<Post> {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.getValue() != null) {
-                    data.liked = true;
-                } else {
-                    data.liked = false;
-                }
+                data.liked = dataSnapshot.getValue() != null;
 
                 Drawable drawable = data.liked ?
                         ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_favorite_pink_24px) :
