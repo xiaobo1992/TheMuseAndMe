@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/medium_padding">
+
+        <ImageView
+            android:id="@+id/company_logo"
+            android:layout_width="@dimen/large_profile"
+            android:layout_height="@dimen/large_profile"
+            android:layout_gravity="center"
+            android:contentDescription="@string/logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_business_black_24px"
+            android:transitionName="@string/logo_transition" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/small_padding"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/large_text_size"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/company_like"
+                android:layout_width="@dimen/small_profile"
+                android:layout_height="@dimen/small_profile"
+                android:contentDescription="@string/like"
+                android:src="@drawable/ic_favorite_black_24px" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/company_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_padding"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/medium_text_size"
+            tools:text="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/company_image_f2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_height"
+                android:layout_weight="1"
+                android:contentDescription="@string/f2"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/ic_add_a_photo_black_24px"
+                app:placeholderImageScaleType="fitCenter" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/company_image_f3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_height"
+                android:layout_weight="1"
+                android:contentDescription="@string/f3"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@drawable/ic_add_a_photo_black_24px"
+                app:placeholderImageScaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/company_image_f1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_background_height"
+            android:contentDescription="@string/f1"
+            app:actualImageScaleType="fitXY"
+            app:placeholderImage="@drawable/ic_add_a_photo_black_24px"
+            app:placeholderImageScaleType="fitCenter" />
+    </LinearLayout>
+</ScrollView>

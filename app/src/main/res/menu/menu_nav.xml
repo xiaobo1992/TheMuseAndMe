@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/main"
+            android:checked="true"
+            android:textSize="@dimen/medium_text_size"
+            android:title="@string/main" />
+
+        <item
+            android:id="@+id/favourite"
+            android:textSize="@dimen/medium_text_size"
+            android:title="@string/favourite" />
+
+        <item
+            android:id="@+id/application"
+            android:textSize="@dimen/medium_text_size"
+            android:title="@string/application" />
+    </group>
+</menu>

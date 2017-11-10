@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/medium_padding">
+
+    <TextView
+        android:id="@+id/post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_padding"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text_size"
+        tools:text="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_title"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/post_author_image"
+            android:layout_width="@dimen/small_profile"
+            android:layout_height="@dimen/small_profile"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@drawable/ic_person_black_24px"
+            fresco:placeholderImageScaleType="fitCenter"
+            android:contentDescription="@string/advisor"/>
+
+        <TextView
+            android:id="@+id/post_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/small_text_size"
+            tools:text="@string/app_name" />
+    </LinearLayout>
+
+</RelativeLayout>

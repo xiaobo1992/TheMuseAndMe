@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/medium_padding">
+
+        <EditText
+            android:id="@+id/application_edit_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/company"
+            android:textColorHint="@color/colorAccent" />
+
+
+        <EditText
+            android:id="@+id/application_edit_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/postiion"
+            android:textColorHint="@color/colorAccent" />
+
+
+        <EditText
+            android:id="@+id/application_edit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/date"
+            android:textColorHint="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/application_edit_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/status"
+            android:textColorHint="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/application_edit_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/comment"
+            android:textColorHint="@color/colorAccent" />
+
+    </LinearLayout>
+</LinearLayout>

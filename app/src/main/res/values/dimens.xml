@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
+    <dimen name="large_padding">24dp</dimen>
+    <dimen name="xsmall_text_size">8sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="medium20_text_size">20sp</dimen>
+    <dimen name="large_text_size">24sp</dimen>
+    <dimen name="header_background_height">200dp</dimen>
+    <dimen name="image_height">150dp</dimen>
+    <dimen name="map_min_height">200dp</dimen>
+
+    <dimen name="avatar">64dp</dimen>
+    <dimen name="icon">40dp</dimen>
+    <dimen name="xlarge_text_size">36dp</dimen>
+    <dimen name="small_profile">32dp</dimen>
+    <dimen name="medium_profile">64dp</dimen>
+    <dimen name="large_profile">96dp</dimen>
+    <dimen name="tab_elevation">3dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+
+</resources>

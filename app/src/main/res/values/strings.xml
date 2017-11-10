@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">TheMuseAndMe</string>
+    <string name="logout">Log out</string>
+    <string name="company">Company</string>
+    <string name="job">Job</string>
+    <string name="coach">Coach</string>
+    <string name="post">Post</string>
+    <string name="posts">Posts</string>
+    <string name="seeAllJobs">See all jobs</string>
+    <string name="logo_transition">logo_transition</string>
+    <string name="bio">Bio</string>
+    <string name="data">Date</string>
+    <string name="postiion">Position</string>
+    <string name="comment">Comment</string>
+    <string name="save">Save</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="specialization">Specializations</string>
+    <string name="product">Products</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="main">Main</string>
+    <string name="favourite">Favourite</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="web">Web</string>
+    <string name="location">Location</string>
+    <string name="save_application">Save Application</string>
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="add_application">Add Application</string>
+    <string name="application">Application</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="price">Price</string>
+    <string name="money_sign">$</string>
+    <string name="work">Work</string>
+    <string name="advisor">Advisor</string>
+    <string name="like">Like</string>
+    <string name="logo">Logo</string>
+    <string name="f1">f1_image</string>
+    <string name="f2">f2_image</string>
+    <string name="f3">f3_image</string>
+
+</resources>

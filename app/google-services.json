@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "1099037493294",
+    "firebase_url": "https://fir-themuse.firebaseio.com",
+    "project_id": "firebase-themuse",
+    "storage_bucket": "firebase-themuse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099037493294:android:f3ccf51135e87b25",
+        "android_client_info": {
+          "package_name": "com.bobo.normalman.themuseandme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1099037493294-iso3h5rqgu0v7rbia2k3bntq1esfs88k.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1099037493294-mq29tqqi99u39dt8de368pmduk76klrp.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1099037493294-rcm5j7qp82dubept7a8e20oho3n5f44p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bobo.normalman.themuseandme",
+            "certificate_hash": "526fcd66a36a98430d504d041ea3f7170fbe0012"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWDbMzY-J-pf1Zcuh51ZfUct08VCT6n5o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099037493294-iso3h5rqgu0v7rbia2k3bntq1esfs88k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

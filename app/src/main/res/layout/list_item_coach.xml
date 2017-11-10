@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/medium_padding">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/coach_avator"
+        android:layout_width="@dimen/avatar"
+        android:layout_height="@dimen/avatar"
+        android:layout_alignParentLeft="true"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:placeholderImage="@drawable/ic_person_black_24px"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:roundAsCircle="true"
+        android:contentDescription="@string/coach"/>
+
+    <TextView
+        android:id="@+id/coach_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_toRightOf="@+id/coach_avator"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text_size"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/coach_specializations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coach_name"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_toRightOf="@+id/coach_avator"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/small_text_size"
+        tools:text="@string/app_name" />
+
+</RelativeLayout>

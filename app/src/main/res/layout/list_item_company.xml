@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/medium_padding">
+
+    <ImageView
+        android:id="@+id/company_avator"
+        android:layout_width="@dimen/avatar"
+        android:layout_height="@dimen/avatar"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_business_black_24px"
+        android:transitionName="@string/logo_transition" />
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_marginTop="@dimen/small_padding"
+        android:layout_toRightOf="@+id/company_avator"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text_size"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/company_industries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/company_name"
+        android:layout_marginLeft="@dimen/medium_padding"
+        android:layout_toRightOf="@+id/company_avator"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/small_text_size"
+        tools:text="@string/app_name" />
+
+</RelativeLayout>
+
+
