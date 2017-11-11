@@ -4,8 +4,8 @@ android {
     signingConfigs {
         config {
             keyAlias 'themuse'
-            keyPassword 'thumuse'
-            storeFile file('$rootDir/keystore.jks')
+            keyPassword 'themuse'
+            storeFile file("$rootDir/keystore.jks")
             storePassword 'themuse'
         }
     }
@@ -13,7 +13,7 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.bobo.normalman.themuseandme"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
