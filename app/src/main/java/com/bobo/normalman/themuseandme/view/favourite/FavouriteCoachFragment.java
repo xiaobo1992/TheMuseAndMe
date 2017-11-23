@@ -2,6 +2,7 @@ package com.bobo.normalman.themuseandme.view.favourite;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -46,6 +47,7 @@ public class FavouriteCoachFragment extends CoachListFragment {
                 return;
             }
         });
+        refreshLayout.setEnabled(false);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);

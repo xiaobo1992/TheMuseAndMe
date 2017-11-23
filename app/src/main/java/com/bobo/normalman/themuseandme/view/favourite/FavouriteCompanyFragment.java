@@ -46,6 +46,7 @@ public class FavouriteCompanyFragment extends CompanyListFragment {
                 return;
             }
         });
+        refreshLayout.setEnabled(false);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);

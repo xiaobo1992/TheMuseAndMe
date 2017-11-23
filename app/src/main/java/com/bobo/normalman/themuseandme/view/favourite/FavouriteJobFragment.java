@@ -45,6 +45,7 @@ public class FavouriteJobFragment extends JobListFragment {
                 return;
             }
         });
+        refreshLayout.setEnabled(false);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);

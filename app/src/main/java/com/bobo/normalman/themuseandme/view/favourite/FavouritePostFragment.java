@@ -47,6 +47,7 @@ public class FavouritePostFragment extends PostListFragment {
                 return;
             }
         });
+        refreshLayout.setEnabled(false);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);
