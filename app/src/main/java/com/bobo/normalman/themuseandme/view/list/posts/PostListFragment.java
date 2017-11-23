@@ -3,6 +3,7 @@ package com.bobo.normalman.themuseandme.view.list.posts;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.os.AsyncTaskCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -48,6 +49,12 @@ public class PostListFragment extends BaseListFragment {
                 AsyncTaskCompat.executeParallel(new LoadPostTask(adapter, adapter.getDataCount() / COUNT_PER_PAGE));
             }
         });
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new LoadPostTask(adapter, true).execute();
+            }
+        });
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);
@@ -59,6 +66,11 @@ public class PostListFragment extends BaseListFragment {
             super(adapter, page);
         }
 
+        public LoadPostTask(PostListAdapter adapter, boolean refreshing) {
+            super(adapter, 0);
+            this.refreshing = refreshing;
+        }
+
         @Override
         protected List<Post> doInBackground(Void... voids) {
             try {
@@ -66,6 +78,14 @@ public class PostListFragment extends BaseListFragment {
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(List<Post> results) {
+            super.onPostExecute(results);
+            if (refreshing) {
+                refreshLayout.setRefreshing(false);
             }
         }
     }

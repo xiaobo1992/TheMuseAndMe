@@ -4,6 +4,7 @@ package com.bobo.normalman.themuseandme.view.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,8 +23,13 @@ import butterknife.ButterKnife;
 public abstract class BaseListFragment extends Fragment {
     public static int COUNT_PER_PAGE = 20;
 
-    protected @BindView(R.id.recycler_view)
+    protected
+    @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+
+    protected
+    @BindView(R.id.refresh)
+    SwipeRefreshLayout refreshLayout;
 
     @Nullable
     @Override

@@ -3,12 +3,16 @@ package com.bobo.normalman.themuseandme.view.list.company;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.os.AsyncTaskCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.bobo.normalman.themuseandme.model.Company;
+import com.bobo.normalman.themuseandme.task.LoadCompanyImageTask;
 import com.bobo.normalman.themuseandme.task.LoadListTask;
 import com.bobo.normalman.themuseandme.themuse.TheMuse;
 import com.bobo.normalman.themuseandme.util.ModelUtil;
@@ -43,7 +47,7 @@ public class CompanyListFragment extends BaseListFragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new CompanyListAdapter(new ArrayList<Company>(), new BaseListAdapter.LoadMoreListener() {
             @Override
@@ -51,6 +55,14 @@ public class CompanyListFragment extends BaseListFragment {
                 AsyncTaskCompat.executeParallel(new LoadCompanyListTask(adapter, adapter.getDataCount() / COUNT_PER_PAGE));
             }
         });
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new LoadCompanyListTask(adapter, true).execute();
+            }
+
+        });
+
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);
@@ -63,6 +75,11 @@ public class CompanyListFragment extends BaseListFragment {
             super(adapter, page);
         }
 
+        public LoadCompanyListTask(BaseListAdapter adapter, boolean refresh) {
+            super(adapter, 0);
+            this.refreshing = refresh;
+        }
+
         @Override
         protected List doInBackground(Void... voids) {
             try {
@@ -70,6 +87,14 @@ public class CompanyListFragment extends BaseListFragment {
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(List<Company> results) {
+            super.onPostExecute(results);
+            if (refreshing) {
+                refreshLayout.setRefreshing(false);
             }
         }
     }

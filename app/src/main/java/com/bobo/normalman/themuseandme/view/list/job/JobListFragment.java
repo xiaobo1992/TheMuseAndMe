@@ -3,6 +3,7 @@ package com.bobo.normalman.themuseandme.view.list.job;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.os.AsyncTaskCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -57,6 +58,12 @@ public class JobListFragment extends BaseListFragment {
                         adapter.getDataCount() / COUNT_PER_PAGE, companyName));
             }
         });
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new LoadJobListTask(adapter, true, companyName).execute();
+            }
+        });
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.setAdapter(adapter);
         recyclerView.addItemDecoration(itemDecoration);
@@ -67,6 +74,12 @@ public class JobListFragment extends BaseListFragment {
 
         public LoadJobListTask(BaseListAdapter adapter, int page) {
             super(adapter, page);
+        }
+
+        public LoadJobListTask(BaseListAdapter adapter, boolean refreshing, String company) {
+            super(adapter, 0);
+            this.refreshing = refreshing;
+            this.company = company;
         }
 
 
@@ -86,6 +99,14 @@ public class JobListFragment extends BaseListFragment {
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(List<Job> results) {
+            super.onPostExecute(results);
+            if (refreshing) {
+                refreshLayout.setRefreshing(false);
             }
         }
     }

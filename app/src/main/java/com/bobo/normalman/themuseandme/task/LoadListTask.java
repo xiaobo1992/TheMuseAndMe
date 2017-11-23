@@ -14,6 +14,7 @@ import java.util.List;
 public abstract class LoadListTask<T> extends AsyncTask<Void, Void, List<T>> {
     protected BaseListAdapter adapter;
     protected int page;
+    protected boolean refreshing = false;
 
     public LoadListTask(BaseListAdapter adapter, int page) {
         this.adapter = adapter;
