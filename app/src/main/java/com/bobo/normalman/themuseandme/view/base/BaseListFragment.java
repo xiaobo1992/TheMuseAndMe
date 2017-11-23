@@ -34,7 +34,7 @@ public abstract class BaseListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_recyclerview, container, false);
+        View view = inflater.inflate(R.layout.fragment_recycler_view_refresh, container, false);
         ButterKnife.bind(this, view);
         Fresco.initialize(view.getContext());
         return view;
