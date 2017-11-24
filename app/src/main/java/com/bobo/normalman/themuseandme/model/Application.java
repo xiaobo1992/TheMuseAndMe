@@ -17,13 +17,11 @@ public class Application {
             this.name = name;
         }
     }
-
     public String jobId;
-    public String jobPosition;
     public long jobApplicationDate;
-    public String jobCompany;
     public String jobStatus;
     public String comment;
+    public Job job;
 
     public void setJobStatus(Status status) {
         jobStatus = status.name;

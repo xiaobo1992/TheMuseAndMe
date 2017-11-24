@@ -54,8 +54,8 @@ public class EditApplicationActivity extends ApplicationActivity implements Stat
     @Override
     public void bindData() {
         comment.setText(application.comment);
-        company.setText(application.jobCompany);
-        position.setText(application.jobPosition);
+        company.setText(application.job.getCompanyName());
+        position.setText(application.job.name);
         status.setText(application.jobStatus);
         date.setText(DateUtil.toString(application.jobApplicationDate));
         status.setOnClickListener(new View.OnClickListener() {
@@ -106,8 +106,6 @@ public class EditApplicationActivity extends ApplicationActivity implements Stat
     }
 
     public void updateApplication() {
-        application.jobPosition = position.getText().toString();
-        application.jobCompany = company.getText().toString();
         application.comment = comment.getText().toString();
         application.jobStatus = status.getText().toString();
         try {

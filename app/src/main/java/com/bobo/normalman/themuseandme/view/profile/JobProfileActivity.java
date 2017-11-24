@@ -149,10 +149,9 @@ public class JobProfileActivity extends BaseProfileActivity<Job> {
                 Intent intent = new Intent(this, EditApplicationActivity.class);
                 Application application = new Application();
                 application.jobId = String.valueOf(data.id);
-                application.jobPosition = data.name;
-                application.jobCompany = data.getCompanyName();
                 application.jobStatus = Application.Status.Applied.name();
                 application.jobApplicationDate = new Date().getTime();
+                application.job = data;
                 application.comment = "";
                 intent.putExtra(ApplicationActivity.KEY_APPLICATION,
                         ModelUtil.toString(application, new TypeToken<Application>() {

@@ -48,9 +48,9 @@ public class ViewApplicationActivity extends ApplicationActivity {
     @Override
     public void bindData() {
         comment.setText(application.comment);
-        company.setText(application.jobCompany);
+        company.setText(application.job.getCompanyName());
         date.setText(DateUtil.toString(application.jobApplicationDate));
-        position.setText(application.jobPosition);
+        position.setText(application.job.name);
         status.setText(application.jobStatus);
     }
 

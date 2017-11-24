@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
                         fragment = ApplicationFragment.newInstance();
                         setTitle(getString(R.string.application));
                         break;
+                    case R.id.analytics:
+                        fragment = AnalyticFragment.newInstance();
+                        setTitle(getString(R.string.analytics));
+                        break;
                 }
                 drawerLayout.closeDrawers();
 

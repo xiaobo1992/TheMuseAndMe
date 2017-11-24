@@ -20,5 +20,12 @@
             android:contentDescription="@string/application"
             android:textSize="@dimen/medium_text_size"
             android:title="@string/application" />
+
+        <item
+            android:id="@+id/analytics"
+            android:contentDescription="@string/application"
+            android:textSize="@dimen/medium_text_size"
+            android:title="@string/analytics" />
+
     </group>
 </menu>

@@ -38,8 +38,8 @@ public class ApplicationAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         final Application application = applications.get(position);
         final ApplicationViewHolder viewHolder = (ApplicationViewHolder) holder;
-        viewHolder.position.setText(application.jobPosition);
-        viewHolder.company.setText(application.jobCompany);
+        viewHolder.position.setText(application.job.name);
+        viewHolder.company.setText(application.job.getCompanyName());
         viewHolder.status.setText(application.jobStatus);
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
