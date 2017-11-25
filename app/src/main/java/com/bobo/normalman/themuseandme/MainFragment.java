@@ -24,11 +24,6 @@ import butterknife.ButterKnife;
  */
 
 public class MainFragment extends Fragment {
-    public static final String KEY_LIST_TYPE = "KEY_TYPE";
-    public static final String KEY_JOB = "JOB";
-    public static final String KEY_COMPANY = "COMPANY";
-    public static final String KEY_COACH = "COACH";
-    public static final String KEY_POST = "POST";
 
     @BindView(R.id.viewPager)
     JazzyViewPager viewPager;

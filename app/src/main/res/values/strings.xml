@@ -44,5 +44,8 @@
     <string name="rate">rate</string>
     <string name="analytics">Analytics</string>
     <string name="level">Level</string>
+    <string name="job_analytic_status">Job Application Status Analytics</string>
+    <string name="job_analytic_location">Job Application Location Analytics</string>
+    <string name="job_analytic_level">Job Application Level Analytics</string>
 
 </resources>

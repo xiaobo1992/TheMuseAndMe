@@ -60,11 +60,11 @@ public class AnalyticFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return ApplicationLevelAnalytics.newInstance("Job Application Level Analytics");
+                    return ApplicationLevelAnalytics.newInstance(getString(R.string.job_analytic_level));
                 case 1:
-                    return ApplicationLocationAnalytics.newInstance("Job Application Location Analytics");
+                    return ApplicationLocationAnalytics.newInstance(getString(R.string.job_analytic_location));
                 case 2:
-                    return ApplicationStatusAnalytics.newInstance("Job Application Stattus Analytics");
+                    return ApplicationStatusAnalytics.newInstance(getString(R.string.job_analytic_status));
             }
             return null;
         }
